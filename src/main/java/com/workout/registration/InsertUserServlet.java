@@ -41,7 +41,7 @@ public class InsertUserServlet extends HttpServlet {
                 if((re_pass.equals(password)) && UserController.isUserInDatabase(email)==false)
                 {
                     User user = new User(0,name, email, password, re_pass, weight, height,"1","1");
-
+                    System.out.println(user);
                     UserController userController = new UserController();
 
                     int rows = userController.insertUser(user);
